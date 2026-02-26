@@ -135,8 +135,8 @@ Dependent on number and roles of VMs:
 
 #### Logical Structure
 
-* **Forest** — top-level container; set of domain trees sharing a common namespace
-* **Tree** — collection of domains in a hierarchy
+* **Forest** — top-level container; set of domain trees sharing a common schema, configuration, and global catalog (trees within a forest may have different namespaces)
+* **Tree** — collection of domains sharing a contiguous namespace in a hierarchy
 * **Domain** — security/administrative boundary
 * **Organizational Unit (OU)** — container within a domain for users, groups, computers, etc.
 * **Objects** — users, groups, computers, applications
@@ -519,11 +519,11 @@ Controls network access based on predefined conditions a system must meet before
 Hard/soft-ware to protect IT from outside systems
 
 * **Allowlisting** \- explicit allow; deny by default
-* **Dentylisting** \- explicit deny; allow by default
+* **Denylisting** \- explicit deny; allow by default
 
 #### Software Firewall
 
-* Installed in single system (e.g. ur computer)
+* Installed on a single system (e.g., your computer)
 * Block in/out traffic
 * Notification for potentially bad connections
 * Can **Create Rules** to customize permitted traffic
@@ -545,15 +545,20 @@ Hard/soft-ware to protect IT from outside systems
 
 ### Demilitarized Zone (DMZ)
 
+A network segment positioned **between two firewalls** that separates the internal network from external (untrusted) networks such as the internet
+
+* Hosts public-facing services (e.g., mail gateways, web servers) that must be reachable externally while protecting the internal LAN
+* If a host in the DMZ is compromised, the internal network remains shielded by the inner firewall
+
 ## Unit 11: Publications and Personnel Security
 
 ### Personal and Equipment Protection
 
 #### Personal Safety
 
-* Electrostatic Discharge (ESD) \- electricity between two charged obj. Scary.
+* Electrostatic Discharge (ESD) \- electricity between two charged objects
 * Grounding \- provides path for elect to flow safely into the ground
-* Bonding \- minimizes scary between conductive objects
+* Bonding \- minimizes ESD between conductive objects
 
 #### Equipment Protection
 
